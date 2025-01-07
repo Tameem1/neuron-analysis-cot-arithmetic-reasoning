@@ -2,7 +2,7 @@
 #SBATCH -J NEURON_ANALYSIS
 #SBATCH -o run_out.txt
 #SBATCH -p gpu-short
-#SBATCH --gres=gpu:T4_16GB  # request 1 T4 16GB
+#SBATCH --gres=gpu:v100nv_32GB  # request 1 v100 32GB
 #SBATCH -c 4
 #SBATCH --mem=32G
 #SBATCH -t 1:00:00  # 1 hour limit
