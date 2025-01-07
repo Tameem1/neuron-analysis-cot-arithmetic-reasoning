@@ -1,11 +1,11 @@
 #!/bin/bash -l
 #SBATCH -J NEURON_ANALYSIS
 #SBATCH -o run_out_2.txt
-#SBATCH -p gpu-short
+#SBATCH -p gpu-all
 #SBATCH --gres=gpu:v100_16GB  # request 1 v100 32GB
 #SBATCH -c 4
 #SBATCH --mem=32G
-#SBATCH -t 1:00:00  # 1 hour limit
+#SBATCH -t 7:00:00  # 1 hour limit
 
 # 1) Load modules
 module load gcc11/11.3.0
