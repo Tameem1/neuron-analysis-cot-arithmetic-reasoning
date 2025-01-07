@@ -342,7 +342,7 @@ def main(
         )
 
 if __name__ == "__main__":
-    fire.Fire(main)
+    fire.Fire(main) 
     # torchrun --nproc_per_node 1 gsm8k_inference.py --ckpt_dir ../../../downloads/huggingface/models/llama2-7b/ --tokenizer_path ../../../downloads/huggingface/models/llama2-7b/tokenizer.model --prompt "Let's think step by step" --few_shot False
 
         
