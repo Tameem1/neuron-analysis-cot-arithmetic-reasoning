@@ -47,8 +47,8 @@ def main():
     # Hardcoded paths
     few_shot_path = "data/prompts/equation_only.txt"         # Path to few-shot prompt
     test_path = "data/test.jsonl"                            # Path to test data
-    model_path = "~/models/qwen2.5-math-1.5B-instruct"       # Path to your model directory
-    tokenizer_path = "~/models/qwen2.5-math-1.5B-instruct/tokenizer.json"  # Path to your tokenizer
+    model_path = "/export/home/tkabbani/models/qwen2.5-math-1.5B-instruct"       # Path to your model directory
+    tokenizer_path = "/export/home/tkabbani/models/qwen2.5-math-1.5B-instruct/tokenizer.json"  # Path to your tokenizer
 
     # Number of samples to test
     num_samples = 4
