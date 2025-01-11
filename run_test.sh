@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=4         # Number of CPU cores per task
 #SBATCH --mem=16G                 # Total memory per node
 #SBATCH --time=01:00:00           # Time limit hrs:min:sec
-#SBATCH -p gpu-short
+#SBATCH -p cpu-all
 
 # 1) Load modules
 module load gcc11/11.3.0
