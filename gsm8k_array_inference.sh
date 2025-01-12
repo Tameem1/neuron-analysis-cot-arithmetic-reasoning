@@ -20,7 +20,7 @@ conda activate myexp                  # or your environment name
 CHUNK_ID=${SLURM_ARRAY_TASK_ID}
 
 # Point to the chunk you want:
-DATA_PATH="splitted_data/data_chunk_${CHUNK_ID}.jsonl"
+DATA_PATH="data/data_chunk_${CHUNK_ID}.jsonl"
 
 # Decide how you want to name the output directory
 RESULTS_PATH="results/chunk_${CHUNK_ID}"
