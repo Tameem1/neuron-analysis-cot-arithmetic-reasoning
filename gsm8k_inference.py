@@ -333,7 +333,7 @@ def main(
             generator,
             data_path=inference_save_path,
             save_path=extract_pred_path,
-            max_gen_len=100
+            max_gen_len=500
         )
         compute_accuracy(
             gold_data_path=data_path,
