@@ -2,7 +2,7 @@
 #SBATCH -J NEURON_ANALYSIS
 #SBATCH -o run_out_4.txt
 #SBATCH -p gpu-all
-#SBATCH --gres=gpu:A16_16GB
+#SBATCH --gres=gpu:v100_16GB
 #SBATCH -c 4
 #SBATCH --mem=32G
 #SBATCH -t 7:00:00 
