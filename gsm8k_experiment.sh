@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH -J NEURON_ANALYSIS
-#SBATCH -o run_out_2.txt
+#SBATCH -o run_out_3.txt
 #SBATCH -p gpu-all
 #SBATCH --gres=gpu:T4_16GB:1 
 #SBATCH -c 4
