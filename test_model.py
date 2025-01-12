@@ -105,7 +105,7 @@ def main():
 
     # Model configuration
     model_name = "~/models/qwen2.5-math-1.5B-instruct"                                   # Hugging Face model name; choose as desired
-    tokenizer_name = "~/models/qwen2.5-math-1.5B-instruct/tokenizer.json"                               # Corresponding tokenizer
+    tokenizer_name = "~/models/qwen2.5-math-1.5B-instruct/"                               # Corresponding tokenizer
 
     # Number of samples to test
     num_samples = 4
