@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -J NEURON_ANALYSIS
-#SBATCH -o run_out_4.txt
+#SBATCH -o run_out_5.txt
 #SBATCH -p gpu-all
-#SBATCH --gres=gpu:v100_16GB
+#SBATCH --gres=gpu:v100_16GB:2
 #SBATCH -c 4
 #SBATCH --mem=32G
 #SBATCH -t 7:00:00 
