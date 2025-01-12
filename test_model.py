@@ -104,9 +104,10 @@ def main():
     test_path = "data/test.jsonl"                         # Path to test data
 
     # Model configuration
-    model_name = "~/models/qwen2.5-math-1.5B-instruct"                                   # Hugging Face model name; choose as desired
-    tokenizer_name = "~/models/qwen2.5-math-1.5B-instruct/"                               # Corresponding tokenizer
-
+    #model_name = "~/models/qwen2.5-math-1.5B-instruct"                                   # Hugging Face model name; choose as desired
+    #tokenizer_name = "~/models/qwen2.5-math-1.5B-instruct/"                               # Corresponding tokenizer
+    model_name = "Qwen/Qwen2.5-Math-1.5B-Instruct"                                   # Hugging Face model name; choose as desired
+    tokenizer_name = "Qwen/Qwen2.5-Math-1.5B-Instruct"   
     # Number of samples to test
     num_samples = 4
 
