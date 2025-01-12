@@ -2,6 +2,7 @@ import json
 from typing import List
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+import warnings
 
 def load_few_shot_prompt(prompt_path: str) -> str:
     """
@@ -88,9 +89,10 @@ def perform_inference(model, tokenizer, prompts: List[str], max_gen_len: int = 1
         outputs = model.generate(
             **inputs,
             max_new_tokens=max_gen_len,
-            temperature=0.7,
-            top_p=0.9,
-            no_repeat_ngram_size=3,
+            do_sample=True,          # Enable sampling
+            temperature=0.7,         # Sampling temperature
+            top_p=0.9,               # Top-p (nucleus) sampling
+            no_repeat_ngram_size=3,  # Prevent repeating n-grams
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.pad_token_id,
         )
@@ -101,18 +103,17 @@ def perform_inference(model, tokenizer, prompts: List[str], max_gen_len: int = 1
 def main():
     # Hardcoded paths
     few_shot_path = "data/prompts/equation_only.txt"  # Path to few-shot prompt
-    test_path = "data/test.jsonl"                         # Path to test data
+    test_path = "data/test.jsonl"                     # Path to test data
 
     # Model configuration
-    #model_name = "~/models/qwen2.5-math-1.5B-instruct"                                   # Hugging Face model name; choose as desired
-    #tokenizer_name = "~/models/qwen2.5-math-1.5B-instruct/"                               # Corresponding tokenizer
-    model_name = "Qwen/Qwen2.5-Math-1.5B-Instruct"                                   # Hugging Face model name; choose as desired
-    tokenizer_name = "Qwen/Qwen2.5-Math-1.5B-Instruct"   
+    model_name = "Qwen/Qwen2.5-Math-1.5B-Instruct"     # Hugging Face model name
+    tokenizer_name = "Qwen/Qwen2.5-Math-1.5B-Instruct" # Corresponding tokenizer
+
     # Number of samples to test
     num_samples = 4
 
     # Prompt type
-    prompt_type = "equation_only"                         # Can be "equation_only" or other types as defined
+    prompt_type = "equation_only"                     # Can be "equation_only" or other types as defined
 
     # Maximum tokens to generate
     max_gen_len = 700
@@ -133,6 +134,10 @@ def main():
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
         print("Pad token not found. Setting pad_token to eos_token.")
+
+    # Set padding side to 'left' for decoder-only models
+    tokenizer.padding_side = 'left'
+    print(f"Tokenizer padding side set to: {tokenizer.padding_side}")
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name
