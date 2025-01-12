@@ -2,7 +2,7 @@
 #SBATCH --job-name=lm_test        # Job name
 #SBATCH --output=lm_test.out      # Standard output and error log
 #SBATCH --ntasks=1                # Number of tasks (processes)
-#SBATCH --cpus-per-task=4         # Number of CPU cores per task
+#SBATCH --cpus-per-task=8         # Number of CPU cores per task
 #SBATCH --mem=16G                 # Total memory per node
 #SBATCH --time=01:00:00           # Time limit hrs:min:sec
 #SBATCH -p cpu-all
