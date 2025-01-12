@@ -100,7 +100,7 @@ def perform_inference(model, tokenizer, prompts: List[str], max_gen_len: int = 1
 
 def main():
     # Hardcoded paths
-    few_shot_path = "data/prompts/equation_only.txt "  # Path to few-shot prompt
+    few_shot_path = "/data/prompts/equation_only.txt "  # Path to few-shot prompt
     test_path = "data/test.jsonl"                         # Path to test data
 
     # Model configuration
