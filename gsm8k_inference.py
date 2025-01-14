@@ -281,7 +281,6 @@ def main(
 ):
     # 1) Load data
     data = read_data(data_path)
-    data = data[:10]
     # 2) Load prompt
     if few_shot:
         if '.txt' not in prompt:
