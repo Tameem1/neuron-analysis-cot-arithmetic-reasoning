@@ -1,11 +1,11 @@
 #!/bin/bash -l
 #SBATCH -J NEURON_ANALYSIS
-#SBATCH -o run_out_6.txt
-#SBATCH -p gpu-all
-#SBATCH --gres=gpu:v100_16GB:2
+#SBATCH -o run_7.txt
+#SBATCH -p gpu-short
+#SBATCH --gres=gpu:T4_16GB
 #SBATCH -c 4
 #SBATCH --mem=32G
-#SBATCH -t 7:00:00 
+#SBATCH -t 01:00:00
 
 # 1) Load modules
 module load gcc11/11.3.0
@@ -22,7 +22,7 @@ cd ~/neuron-analysis-cot-arithmetic-reasoning
 # 4) (Optional) If you need data in data/test.jsonl or gsm8k data, ensure it's in place
 
 # 5) Run the GSM8K Inference
-torchrun --nproc_per_node 1 gsm8k_inference.py --ckpt_dir ~/models/qwen2.5-math-1.5B-instruct --tokenizer_path ~/models/qwen2.5-math-1.5B-instruct/tokenizer.json --prompt data/prompts/equation_only.txt --few_shot False --results_dir results
+torchrun --nproc_per_node 1 gsm8k_inference.py --ckpt_dir ~/models/qwen2.5-math-1.5B-instruct --tokenizer_path ~/models/qwen2.5-math-1.5B-instruct/tokenizer.json --prompt "Let's think step by step" --few_shot False --results_dir results
 
 # 6) Run Algorithm One
 # torchrun --nproc_per_node=1 main.py \
