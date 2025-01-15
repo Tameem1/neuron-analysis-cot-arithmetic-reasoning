@@ -4,11 +4,11 @@
 #SBATCH --gres=gpu:T4_16GB                      # 1 GPU per sub-job
 #SBATCH -c 4                                    # CPU cores per sub-job
 #SBATCH --mem=16G                               # Memory per sub-job
-#SBATCH --array=0,2,4,5,7,8                     # Remaining chunks
+#SBATCH --array=2,4,7,8                         # Remaining chunks
 #SBATCH -o logs/%A_%a.out                       # Log file (%A = array job ID, %a = sub-job index)
 
 # (Optional) set a max run time if needed:
-## #SBATCH --time=02:00:00
+## #SBATCH --time=01:00:00
 
 module load cuda11.8/toolkit                    # or whichever CUDA module is right for your code
 module load cudnn8.9-cuda11.8/8.9.1.23          # If you need a particular cuDNN
