@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH -J gsm8k_inference_array                # Job name
-#SBATCH -p gpu-short                            # Partition
+#SBATCH -p gpu-all                            # Partition
 #SBATCH --gres=gpu:T4_16GB                      # 1 GPU per sub-job
 #SBATCH -c 4                                    # CPU cores per sub-job
 #SBATCH --mem=16G                               # Memory per sub-job
