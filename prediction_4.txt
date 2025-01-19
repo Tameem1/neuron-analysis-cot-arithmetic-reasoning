@@ -1,0 +1,10 @@
+Question: James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?
+Answer:, James runs 3 x 6 = 18 sprints a week.
+Since each sprint is 65 meters, he runs 15 x 10 = 300 meters a week.
+
+To determine the total distance James runs in a week, we need to follow these steps:
+
+1. Calculate the total number of sprints James runs each week.
+2. Determine the total_distance by multiplying the number of runs by the distance of each run.
+
+First, we know that

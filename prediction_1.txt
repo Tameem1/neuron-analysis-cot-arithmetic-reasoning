@@ -1,0 +1,8 @@
+Question: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?
+Answer: Janet's ducks lay a total of 10 eggs each day after accounting for the eggs she eats and bates for her family. Since she sells each egg for $1, she makes $20 every day.
+
+Let's break down the problem step-by-step and use Python to ensure the accuracy of our calculations.
+
+1. Janet's eggs per morning: 3 eggs
+2. Janet bakes 4 eggs for her friend
+3. Total eggs laid per day: 15 eggs

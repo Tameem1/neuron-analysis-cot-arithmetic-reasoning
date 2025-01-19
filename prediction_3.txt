@@ -1,0 +1,11 @@
+Question: Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?
+Answer:, 1. Calculate the total cost of the purchase and repairs:
+   \[
+   \text{Total cost} = \$80{,}00{+}\$50{=}\$130{.}
+   \]
+
+2. Determine the increased value of flipping the house:
+   - The house increased in value by 200% of its original purchase price.
+   - Therefore, the increased amount is:
+     \[
+     \text{{Increased value

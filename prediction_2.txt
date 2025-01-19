@@ -1,0 +1,11 @@
+Question: A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?
+Answer:: A source takes 3 bolts of red fiber and twice that much green fiber. How many total bolts does it need?
+
+To solve this problem, we need to break it down into smaller steps and calculate the total number of bolts required for each color separately before summing them up.
+
+### Step-by-Step Solution:
+
+1. **Blue fiber source:**
+   - The source takes \(2\) bolts of white fiber.
+   - It takes half as much whiteasers as blueasers.
+   \

@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:T4_16GB                      # 1 GPU per sub-job
 #SBATCH -c 4                                    # CPU cores per sub-job
 #SBATCH --mem=16G                               # Memory per sub-job
-#SBATCH --array=2,4,7,8                         # Remaining chunks
+#SBATCH --array=0,1,2,3,4                         # Remaining chunks
 #SBATCH -o logs/%A_%a.out                       # Log file (%A = array job ID, %a = sub-job index)
 
 # (Optional) set a max run time if needed:
@@ -31,7 +31,7 @@ echo "Saving results to:     $RESULTS_PATH"
 torchrun --nproc_per_node=1 gsm8k_inference.py \
   --ckpt_dir ~/models/qwen2.5-math-1.5B-instruct \
   --tokenizer_path ~/models/qwen2.5-math-1.5B-instruct/tokenizer.json \
-  --prompt data/prompts/equation_only.txt \
-  --few_shot False \
+  --prompt /data/prompts/cot_prompt_1shot.txt \
+  --few_shot True \
   --results_dir "$RESULTS_PATH" \
   --data_path "$DATA_PATH"
