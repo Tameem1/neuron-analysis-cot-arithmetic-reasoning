@@ -31,7 +31,7 @@ echo "Saving results to:     $RESULTS_PATH"
 torchrun --nproc_per_node=1 gsm8k_inference.py \
   --ckpt_dir ~/models/qwen2.5-math-1.5B-instruct \
   --tokenizer_path ~/models/qwen2.5-math-1.5B-instruct/tokenizer.json \
-  --prompt /data/prompts/cot_prompt_1shot.txt \
+  --prompt data/prompts/cot_prompt_1shot.txt \
   --few_shot True \
   --results_dir "$RESULTS_PATH" \
   --data_path "$DATA_PATH"
