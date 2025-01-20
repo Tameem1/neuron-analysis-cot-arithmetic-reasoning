@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:T4_16GB                      # 1 GPU per sub-job
 #SBATCH -c 4                                    # CPU cores per sub-job
 #SBATCH --mem=16G                               # Memory per sub-job
-#SBATCH --array=2,6                        # Remaining chunks
+#SBATCH --array=2                        # Remaining chunks
 #SBATCH -o logs/%A_%a.out                       # Log file (%A = array job ID, %a = sub-job index)
 
 # (Optional) set a max run time if needed:
